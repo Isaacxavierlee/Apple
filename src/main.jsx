@@ -10,7 +10,6 @@ Sentry.init({
   dsn: "https://e1d776adf991a8daab788b83f9b489de@o4507344956817408.ingest.us.sentry.io/4507594288070656",
   integrations: [
     Sentry.browserTracingIntegration(),
-
     Sentry.replayIntegration(),
   ],
   // Performance Monitoring
@@ -21,6 +20,8 @@ Sentry.init({
   replaysSessionSampleRate: 0.1, // This sets the sample rate at 10%. You may want to change it to 100% while in development and then sample at a lower rate in production.
   replaysOnErrorSampleRate: 1.0, // If you're not already sampling the entire session, change the sample rate to 100% when sampling sessions where errors occur.
 });
+
+
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
